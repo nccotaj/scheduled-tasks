@@ -1,14 +1,14 @@
 ##################### Extra Hard Starting Project ######################
 import datetime as dt
-import smtplib, pandas, random
+import smtplib, pandas, random, os
 
 PLACEHOLDER = "[NAME]"
 
 
-my_email = "n8434109@gmail.com"
-my_password = "Testemail1234!"
 
-app_password = "gkyyoacmurxwodep"
+
+MY_EMAIL = os.environ.get("my_email")
+APP_PASSWORD = os.environ.get("app_password")
 
 
 
@@ -50,8 +50,8 @@ else:
         # 4. Send the letter generated in step 3 to that person's email address.
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
-            connection.login(user=my_email, password=app_password)
-            connection.sendmail(from_addr=my_email, to_addrs=email, msg=birthday_message)
+            connection.login(user=MY_EMAIL, password=APP_PASSWORD)
+            connection.sendmail(from_addr=MY_EMAIL, to_addrs=email, msg=birthday_message)
             
 
 
