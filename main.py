@@ -8,7 +8,7 @@ PLACEHOLDER = "[NAME]"
 
 
 MY_EMAIL = os.environ.get("MY_EMAIL")
-APP_PASSWORD = os.environ.get("APP_PASWORD")
+APP_PASSWORD = os.environ.get("APP_PASSWORD")
 
 
 
