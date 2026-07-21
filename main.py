@@ -50,7 +50,7 @@ else:
         # 4. Send the letter generated in step 3 to that person's email address.
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
-            connection.login(user=MY_EMAIL, password=APP_PASSWORD)
+            connection.login(user=MY_EMAIL, password=MY_PASSWORD)
             connection.sendmail(from_addr=MY_EMAIL, to_addrs=email, msg=birthday_message)
             
 
